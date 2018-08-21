@@ -252,7 +252,13 @@ module.exports = class extends Language {
             COMMAND_TPG_DESCRIPTION: "-BOT OWNER ONLY-",
             COMMAND_DONATE_DESCRIPTION: "Donate to PenguBot and help make something awesome!",
 
-            // Music Commands
+            // ----------------------------------------
+            /*
+                Music Commands
+            */
+
+            // Descriptions
+
             COMMAND_DMSONG_DESCRIPTION: "Make Pengu send you the current song in your DMs.",
             COMMAND_LOOP_DESCRIPTION: "Loop a song so it repeats when it finishes playing.",
             COMMAND_LYRICS_DESCRIPTION: "Get a song's lyrics directly with Pengu.",
@@ -268,7 +274,12 @@ module.exports = class extends Language {
             COMMAND_PAUSE_DESCRIPTION: "Pause/Resume the currently playing music.",
             COMMAND_VOLUME_DESCRIPTION: "Change the default volume of Pengu in your guild",
             COMMAND_DJONLY_DESCRIPTION: "Toggle Pengu DJ only mode for Music Commands.",
+
+            // Responses
+
             INHIBITOR_DJ_ONLY: "<:penguError:435712890884849664> ***This guild is configured to allow only Pengu DJ's to use Music Commands.***",
+
+            // ----------------------------------------
 
             // Game Stats
             COMMAND_FORTNITE_DESCRIPTION: "Get Fortnite Game Statistics within Discord.",
@@ -290,6 +301,7 @@ module.exports = class extends Language {
             ER_MUSIC_TRIP: "I tripped on a wire! *Ouch!* It hurts but I'll recover, try again later or contact us at https://discord.gg/kWMcUNe",
             ER_MUSIC_NF: "<:penguError:435712890884849664> I could not find any results for your query, please try again with a different one or contact us at https://discord.gg/kWMcUNe",
 
+            // ----------------------------------------
             /*
                 Lavalink Messages
             */
@@ -302,6 +314,8 @@ module.exports = class extends Language {
                 `${options.map((o, index) => `➡ \`${++index}\` ${o.info.title} - ${o.info.author} (${this.client.funcs.friendlyDuration(o.info.length)})`).join("\n")}`,
                 `\n${msgAuthor}, Please select an option by replying from range \`1-5\` to add it to the queue.`
             ]
+
+            // ----------------------------------------
 
         };
     }
