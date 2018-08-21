@@ -288,7 +288,21 @@ module.exports = class extends Language {
             // Custom Messages
             ER_TRY_AGAIN: "I am very sorry but was an error, please try again or contact us at https://discord.gg/kWMcUNe",
             ER_MUSIC_TRIP: "I tripped on a wire! *Ouch!* It hurts but I'll recover, try again later or contact us at https://discord.gg/kWMcUNe",
-            ER_MUSIC_NF: "<:penguError:435712890884849664> I could not find any results for your query, please try again with a different one or contact us at https://discord.gg/kWMcUNe"
+            ER_MUSIC_NF: "<:penguError:435712890884849664> I could not find any results for your query, please try again with a different one or contact us at https://discord.gg/kWMcUNe",
+
+            /*
+                Lavalink Messages
+            */
+            LL_ERR_NP: "No! Something went wrong, try again.",
+            LL_ERR_NQ: "Can't play songs from an empty queue.",
+            LL_ERR_NGR: "Couldn't find an ideal region, please try changing your guild region and try again. If the error presists, contact us at: https://discord.gg/kWMcUNe",
+            LL_ERR_SSI: "<:penguError:435712890884849664> ***Invalid Option Selected, please select from `1-5`. Cancelled song selection.***",
+            LL_SNA_SS: (msgAuthor, options) => [
+                `🎵 | **Select a Song - PenguBot**\n`,
+                `${options.map((o, index) => `➡ \`${++index}\` ${o.info.title} - ${o.info.author} (${this.client.funcs.friendlyDuration(o.info.length)})`).join("\n")}`,
+                `\n${msgAuthor}, Please select an option by replying from range \`1-5\` to add it to the queue.`
+            ]
+
         };
     }
 

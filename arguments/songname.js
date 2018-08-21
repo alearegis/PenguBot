@@ -21,7 +21,7 @@ module.exports = class extends Argument {
         results.playlist = null;
 
         const node = msg.guild.music.idealNode;
-        if (!node) throw "Couldn't find an ideal region, please try changing your guild region and try again. If the error presists, contact us at: https://discord.gg/kWMcUNe";
+        if (!node) throw msg.language.get("LL_ERR_NGR");
 
         const isLink = this.isLink(arg);
         if (isLink) {
@@ -63,12 +63,10 @@ module.exports = class extends Argument {
             if (!searchRes.tracks[0]) searchRes = await this.getTracks(node, `scsearch:${arg}`);
             if (!searchRes.tracks[0]) throw msg.language.get("ER_MUSIC_NF");
             const options = searchRes.tracks.slice(0, 5);
-            const selection = await msg.awaitReply([`🎵 | **Select a Song - PenguBot**\n`,
-                `${options.map((o, index) => `➡ \`${++index}\` ${o.info.title} - ${o.info.author} (${this.client.funcs.friendlyDuration(o.info.length)})`).join("\n")}`,
-                `\n${msg.author}, Please select an option by replying from range \`1-5\` to add it to the queue.`], 20000).catch(() => null);
-            if (!selection) throw "<:penguError:435712890884849664> ***Invalid Option Selected, please select from `1-5`. Cancelled song selection.***";
+            const selection = await msg.awaitReply(msg.language.get("LL_SNA_SS", msg.author, options), 20000).catch(() => null);
+            if (!selection) throw msg.language.get("LL_ERR_SSI");
             const selectedNo = Number(selection);
-            if (selectedNo <= 0 || selectedNo > 5 || selectedNo !== Number(selectedNo)) throw "<:penguError:435712890884849664> ***Invalid Option Selected, please select from `1-5`. Cancelled song selection.***";
+            if (selectedNo <= 0 || selectedNo > 5 || selectedNo !== Number(selectedNo)) throw msg.language.get("LL_ERR_SSI");
             results.push(searchRes.tracks[selectedNo - 1]);
         }
 
