@@ -41,6 +41,7 @@
     "klasa-dashboard-hooks": "github:PenguBot/klasa-dashboard-hooks",
     "klasa-functions": "github:QuantumPlugin/klasa-functions-plugin",
     "klasa-member-gateway": "github:dirigeants/klasa-member-gateway",
+    "kurasuta": "^0.2.10",
     "raven": "^2.6.4",
     "rethinkdbdash": "^2.3.31",
     "twemoji": "^11.0.1",
