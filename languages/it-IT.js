@@ -352,7 +352,7 @@ module.exports = class extends Language {
             CMD_FORT_PLAT: "NomeUtente o Piattaforma non validi. Riprova con una delle seguenti piattaforme: `pc`. `xbox`, `psn`.",
             CMD_FORT_ERR: "Errore nelle Tracking API. Riprova più tardi ..",
             CMD_OSU_ERR: "O non sono riuscito a trovare l'utente .. o abbiamo grossi problemi!!",
-            CMD_UPVOTE_ONLY: "Non hai ancora votato per PenguBot!! Visita il sito <http://bit.ly/VoteDBL> per votare PenguBot ed ottenere l'accesso!",
+            CMD_UPVOTE_ONLY: "Non hai ancora votato per PenguBot!! Visita adesso il sito <http://bit.ly/VoteDBL>",
             CMD_PATRON_ONLY: "Questo server non è un server premium. Considera l'idea di diventare un Patron su <https://patreon.com/PenguBot> per ottenere l'accesso a taluni comandi.",
             CMD_RPS_INVALID: "Mossa non valida. Seleziona nuovamente ..",
             CMD_SLOTS_INVALID: "Il quantitativo di Snowflakes indicato non è valido. Inserisci ALMENO 1 o più Snowflakes.",
@@ -422,7 +422,7 @@ module.exports = class extends Language {
 
             // Music interface - hacked by Rex ;) (starting from 1st Jan)
             MUSICIF_NO_MUSIC_PLAYING: "Non sta suonando alcuna musica!",
-            MUSICIF_NOW_PLAYING_TITLE: "In riproduzione.. - PenguBot",
+            MUSICIF_NOW_PLAYING_TITLE: "In riproduzione..",
             MUSICIF_TITLE: "Titolo",
             MUSICIF_AUTHOR: "Autore/Canale",
             MUSICIF_SONG_LENGHT: "Lunghezza",
